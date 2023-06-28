@@ -1,19 +1,19 @@
+import React, { ReactNode } from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
-import Footer from './Footer'
-import Navbar from './Navbar'
-
-interface Props {
-    children: React.ReactNode;
+interface childrenProps {
+  children: ReactNode;
 }
 
-const Layout: React.FC<Props> = (props: Props) => {
-    return (
-        <div className='w-screen h-screen'>
-            <Navbar />
-            {props.children}
-            <Footer />
-        </div>
-    )
-}
+const Layout: React.FC<childrenProps> = ({ children }: childrenProps) => {
+  return (
+    <div className="w-screen h-screen">
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
