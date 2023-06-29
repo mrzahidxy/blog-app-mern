@@ -1,19 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Blog from "./components/Blog";
-import BlogList from "./components/BlogList";
 import Layout from "./layout/Layout";
+import Blogs from "./pages/Blogs";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<BlogList />} />
-        <Route path="/blogs">
-          <Route path=":id" element={<Blog />} />
+    <Routes>
+      <Route path="/">
+        <Route path="/auth">
+          <Route path="/auth/login" element={<Login />} />
         </Route>
-      </Routes>
-    </Layout>
+
+        <Route index element={<Blogs />} />
+        <Route path="/blogs/:id" element={<Blog />} />
+      </Route>
+    </Routes>
   );
 }
 

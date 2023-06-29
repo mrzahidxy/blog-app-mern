@@ -2,11 +2,11 @@ import React, { ReactNode } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-interface childrenProps {
+interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<childrenProps> = ({ children }: childrenProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="w-screen h-screen">
       <Navbar />

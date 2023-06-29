@@ -1,11 +1,16 @@
 import { RouteObject } from "react-router-dom";
-import BlogList from "../components/BlogList";
+import Blogs from "../pages/Blogs";
+import Login from "../pages/Login";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <BlogList />,
-    children: [{}],
+    element: <Blogs />,
+
+  },
+  {
+    path: "/auth/login",
+    element: <Login />,
   },
 ];
 
